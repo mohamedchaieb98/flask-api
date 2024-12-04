@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web: #service name
+    build: .
+    ports:
+      - "5000:5000" #port-in-local-machine:port-in-the-container
+    volumes:
+      - .:/app #current-directory:workdir-in-container (keep in synch the local code with the app directory)
